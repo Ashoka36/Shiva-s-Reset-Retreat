@@ -1,0 +1,690 @@
+/* ============================================
+   AURORA BOREALIS THEME - SHIVA'S RESET RETREAT
+   Responsive Design for Mobile & Desktop
+   ============================================ */
+
+:root {
+    --aurora-green: #00ff88;
+    --aurora-cyan: #7df9ff;
+    --aurora-purple: #ff00ff;
+    --aurora-pink: #ff7fdb;
+    --aurora-blue: #1a4d5c;
+    --dark-bg: #0a0e27;
+    --dark-secondary: #1a2d5c;
+    --text-light: #e0e0e0;
+    --text-white: #ffffff;
+    --accent-gold: #ffd700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--dark-bg) 0%, var(--dark-secondary) 100%);
+    color: var(--text-light);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ============================================
+   NAVIGATION BAR
+   ============================================ */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(10, 14, 39, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--aurora-cyan);
+    padding: 15px 40px;
+    box-shadow: 0 4px 20px rgba(125, 249, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    background: rgba(10, 14, 39, 0.98);
+    box-shadow: 0 4px 30px rgba(125, 249, 255, 0.2);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 0 10px rgba(125, 249, 255, 0.3));
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-link {
+    color: var(--text-white);
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+    font-size: 16px;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--aurora-cyan), var(--aurora-purple));
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--aurora-cyan);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--aurora-cyan);
+    margin: 5px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 40px 40px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 60px;
+}
+
+.aurora-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+        rgba(26, 77, 92, 0.3) 0%,
+        rgba(45, 58, 92, 0.3) 25%,
+        rgba(92, 45, 58, 0.3) 50%,
+        rgba(92, 77, 45, 0.3) 75%,
+        rgba(26, 77, 92, 0.3) 100%);
+    animation: auroraShift 8s ease-in-out infinite;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 800px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-title {
+    font-size: 72px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, var(--aurora-cyan), var(--aurora-green), var(--aurora-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 30px rgba(125, 249, 255, 0.3);
+    letter-spacing: 2px;
+}
+
+.hero-subtitle {
+    font-size: 28px;
+    color: var(--aurora-pink);
+    margin-bottom: 20px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.tagline {
+    font-size: 24px;
+    color: var(--aurora-cyan);
+    margin-top: 20px;
+    animation: auroraGlow 3s ease-in-out infinite;
+    font-weight: 500;
+}
+
+.aurora-line {
+    width: 200px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--aurora-cyan), var(--aurora-purple), var(--aurora-green));
+    margin: 30px auto;
+    border-radius: 2px;
+    box-shadow: 0 0 20px rgba(125, 249, 255, 0.5);
+}
+
+/* ============================================
+   CONTENT SECTIONS
+   ============================================ */
+
+.content-section {
+    padding: 120px 40px;
+    background: linear-gradient(180deg, transparent 0%, rgba(26, 77, 92, 0.1) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.content-section.alternate {
+    background: linear-gradient(180deg, rgba(92, 45, 58, 0.1) 0%, transparent 100%);
+}
+
+.section-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.content-section h2 {
+    font-size: 48px;
+    margin-bottom: 15px;
+    background: linear-gradient(90deg, var(--aurora-cyan), var(--aurora-green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.section-subtitle {
+    font-size: 20px;
+    color: var(--aurora-pink);
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.section-text {
+    font-size: 18px;
+    color: var(--text-light);
+    margin: 20px 0;
+    line-height: 1.8;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ============================================
+   IMAGE PLACEHOLDERS
+   ============================================ */
+
+.image-placeholder {
+    margin: 40px 0;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    border: 2px solid rgba(125, 249, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.image-placeholder:hover {
+    box-shadow: 0 30px 70px rgba(125, 249, 255, 0.4);
+    border-color: var(--aurora-cyan);
+    transform: translateY(-5px);
+}
+
+.section-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 13px;
+    animation: float 4s ease-in-out infinite;
+}
+
+.placeholder-text {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(10, 14, 39, 0.9);
+    color: var(--aurora-cyan);
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--aurora-cyan);
+}
+
+/* ============================================
+   CTA SECTION
+   ============================================ */
+
+.cta-section {
+    padding: 120px 40px;
+    background: linear-gradient(135deg, 
+        rgba(26, 77, 92, 0.2) 0%,
+        rgba(92, 45, 58, 0.2) 100%);
+    text-align: center;
+    border-top: 2px solid var(--aurora-cyan);
+    border-bottom: 2px solid var(--aurora-purple);
+}
+
+.cta-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, var(--aurora-cyan), var(--aurora-purple), var(--aurora-green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+}
+
+.cta-content p {
+    font-size: 18px;
+    color: var(--text-light);
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 18px 50px;
+    background: linear-gradient(90deg, var(--aurora-cyan), var(--aurora-green));
+    color: var(--dark-bg);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(125, 249, 255, 0.3);
+    border: 2px solid transparent;
+    letter-spacing: 1px;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 50px rgba(125, 249, 255, 0.5);
+    background: linear-gradient(90deg, var(--aurora-green), var(--aurora-cyan));
+}
+
+.cta-secondary {
+    margin-top: 20px;
+    font-size: 14px;
+    color: var(--aurora-pink);
+    font-weight: 500;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.footer {
+    background: rgba(10, 14, 39, 0.95);
+    border-top: 2px solid var(--aurora-cyan);
+    padding: 40px;
+    text-align: center;
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+.footer p {
+    margin: 10px 0;
+}
+
+.footer a {
+    color: var(--aurora-cyan);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: var(--aurora-green);
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes auroraGlow {
+    0%, 100% {
+        color: var(--aurora-cyan);
+        text-shadow: 0 0 10px rgba(125, 249, 255, 0.3);
+    }
+    50% {
+        color: var(--aurora-purple);
+        text-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
+    }
+}
+
+@keyframes auroraShift {
+    0% {
+        background: linear-gradient(135deg, 
+            rgba(26, 77, 92, 0.3) 0%,
+            rgba(45, 58, 92, 0.3) 25%,
+            rgba(92, 45, 58, 0.3) 50%,
+            rgba(92, 77, 45, 0.3) 75%,
+            rgba(26, 77, 92, 0.3) 100%);
+    }
+    50% {
+        background: linear-gradient(135deg, 
+            rgba(45, 58, 92, 0.3) 0%,
+            rgba(92, 45, 58, 0.3) 25%,
+            rgba(92, 77, 45, 0.3) 50%,
+            rgba(26, 77, 92, 0.3) 75%,
+            rgba(45, 58, 92, 0.3) 100%);
+    }
+    100% {
+        background: linear-gradient(135deg, 
+            rgba(26, 77, 92, 0.3) 0%,
+            rgba(45, 58, 92, 0.3) 25%,
+            rgba(92, 45, 58, 0.3) 50%,
+            rgba(92, 77, 45, 0.3) 75%,
+            rgba(26, 77, 92, 0.3) 100%);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - TABLET
+   ============================================ */
+
+@media (max-width: 1024px) {
+    .nav-menu {
+        gap: 20px;
+    }
+
+    .hero-title {
+        font-size: 56px;
+    }
+
+    .hero-subtitle {
+        font-size: 24px;
+    }
+
+    .content-section h2 {
+        font-size: 40px;
+    }
+
+    .section-text {
+        font-size: 16px;
+    }
+
+    .cta-button {
+        padding: 15px 40px;
+        font-size: 16px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - MOBILE
+   ============================================ */
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 12px 20px;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: rgba(10, 14, 39, 0.98);
+        gap: 0;
+        border-bottom: 2px solid var(--aurora-cyan);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        padding: 15px 20px;
+        border-bottom: 1px solid rgba(125, 249, 255, 0.2);
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(10px, 10px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+
+    .logo {
+        height: 40px;
+    }
+
+    .hero {
+        height: 80vh;
+        padding: 100px 20px 40px;
+    }
+
+    .hero-title {
+        font-size: 36px;
+        letter-spacing: 0.5px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+    }
+
+    .tagline {
+        font-size: 16px;
+    }
+
+    .content-section {
+        padding: 80px 20px;
+    }
+
+    .content-section h2 {
+        font-size: 32px;
+    }
+
+    .section-subtitle {
+        font-size: 16px;
+    }
+
+    .section-text {
+        font-size: 14px;
+    }
+
+    .image-placeholder {
+        margin: 30px 0;
+    }
+
+    .section-image {
+        max-width: 100%;
+    }
+
+    .cta-section {
+        padding: 80px 20px;
+    }
+
+    .cta-content h2 {
+        font-size: 32px;
+    }
+
+    .cta-content p {
+        font-size: 16px;
+    }
+
+    .cta-button {
+        padding: 14px 30px;
+        font-size: 16px;
+    }
+
+    .footer {
+        padding: 30px 20px;
+        font-size: 12px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - SMALL MOBILE
+   ============================================ */
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .logo {
+        height: 35px;
+    }
+
+    .hero {
+        height: 70vh;
+        padding: 80px 15px 30px;
+    }
+
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+
+    .tagline {
+        font-size: 14px;
+    }
+
+    .aurora-line {
+        width: 150px;
+        margin: 20px auto;
+    }
+
+    .content-section {
+        padding: 60px 15px;
+    }
+
+    .content-section h2 {
+        font-size: 26px;
+    }
+
+    .section-subtitle {
+        font-size: 14px;
+    }
+
+    .section-text {
+        font-size: 13px;
+    }
+
+    .placeholder-text {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+
+    .cta-section {
+        padding: 60px 15px;
+    }
+
+    .cta-content h2 {
+        font-size: 26px;
+    }
+
+    .cta-button {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+}
+
+/* ============================================
+   SCROLL ANIMATIONS
+   ============================================ */
+
+.fade-in {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
