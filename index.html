@@ -132,17 +132,15 @@
     <div class="cta-content">
         <h2>Begin Your Journey</h2>
         <p>Transform your life at Shiva's Reset Retreat</p>
-        <a href="https://wa.me/917676432449" class="cta-button" target="_blank">
-            📱 Book Your Retreat
-        </a>
-        <p class="cta-secondary">or call +44 7557431871</p>
+        <button class="cta-button" onclick="revealContact()">📱 Book Your Retreat</button>
+        <p class="cta-secondary" id="contact-info" style="display:none;">WhatsApp or Call to Book</p>
     </div>
 </section>
 
 <!-- FOOTER -->
 <footer class="footer">
     <p>&copy; 2024 Shiva's Reset Retreat. All rights reserved.</p>
-    <p>Palolem, Goa - India | <a href="https://wa.me/917676432449">WhatsApp</a></p>
+    <p>Palolem, Goa - India | <a href="javascript:revealContact()">Contact Us</a></p>
 </footer>
 
 <script src="script.js"></script>

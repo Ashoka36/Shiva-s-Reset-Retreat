@@ -101,6 +101,33 @@ document.querySelectorAll('.content-section').forEach(section => {
 });
 
 // ============================================
+// CONTACT REVEAL FUNCTION (Security)
+// ============================================
+
+function revealContact() {
+    const contactInfo = document.getElementById('contact-info');
+    const whatsappNum = 'https://wa.me/917676432449';
+    const phoneNum = '+44 7557431871';
+    
+    if (contactInfo.style.display === 'none') {
+        contactInfo.style.display = 'block';
+        contactInfo.innerHTML = `
+            <a href="${whatsappNum}" target="_blank" class="contact-link">📱 WhatsApp</a>
+            <span class="contact-separator"> | </span>
+            <span class="contact-phone">Call: ${phoneNum}</span>
+        `;
+    }
+}
+
+// Initialize contact info as hidden on page load
+window.addEventListener('load', function() {
+    const contactInfo = document.getElementById('contact-info');
+    if (contactInfo) {
+        contactInfo.style.display = 'none';
+    }
+});
+
+// ============================================
 // CONSOLE EASTER EGG
 // ============================================
 

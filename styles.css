@@ -688,3 +688,32 @@ body {
         transition-duration: 0.01ms !important;
     }
 }
+
+/* ============================================
+   CONTACT REVEAL STYLING
+   ============================================ */
+
+.contact-link {
+    color: var(--aurora-cyan);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    margin: 0 5px;
+}
+
+.contact-link:hover {
+    color: var(--aurora-green);
+    text-decoration: underline;
+}
+
+.contact-separator {
+    color: var(--aurora-pink);
+    margin: 0 10px;
+    font-weight: 300;
+}
+
+.contact-phone {
+    color: var(--text-light);
+    font-weight: 500;
+    margin: 0 5px;
+}
