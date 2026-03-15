@@ -91,7 +91,7 @@ body {
 .nav-link {
     color: var(--text-white);
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
     position: relative;
     transition: color 0.3s ease;
     font-size: 16px;
@@ -196,7 +196,7 @@ body {
     color: var(--aurora-cyan);
     margin-top: 20px;
     animation: auroraGlow 3s ease-in-out infinite;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .aurora-line {
@@ -206,6 +206,14 @@ body {
     margin: 30px auto;
     border-radius: 2px;
     box-shadow: 0 0 20px rgba(125, 249, 255, 0.5);
+}
+
+.collage-image {
+    width: 100%;
+    max-width: 1200px;
+    display: block;
+    margin: 40px auto;
+    border-radius: 14px;
 }
 
 /* ============================================
@@ -297,7 +305,7 @@ body {
     padding: 10px 20px;
     border-radius: 20px;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 600;
     backdrop-filter: blur(10px);
     border: 1px solid var(--aurora-cyan);
 }
@@ -362,16 +370,17 @@ body {
     margin-top: 20px;
     font-size: 14px;
     color: var(--aurora-pink);
-    font-weight: 500;
+    font-weight: 600;
 }
 
 /* ============================================
    FOOTER
-   ============================================ */
+   =============8============================== */
 
 .footer {
     background: rgba(10, 14, 39, 0.95);
-    border-top: 2px solid var(--aurora-cyan);
+    border-top: 2p;
+    font-size: 18pxx solid var(--aurora-cyan);
     padding: 40px;
     text-align: center;
     color: var(--text-light);
@@ -715,7 +724,7 @@ body {
 
 .contact-phone {
     color: var(--text-light);
-    font-weight: 500;
+    font-weight: 600;
     margin: 0 5px;
 }
 
