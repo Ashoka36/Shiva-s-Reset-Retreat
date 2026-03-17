@@ -1,5 +1,5 @@
 // ============================================
-// AURORA BOREALIS THEME - INTERACTIVE SCRIPT
+// Neon Purple Theme - INTERACTIVE SCRIPT
 // Mobile Menu & Scroll Effects
 // ============================================
 
