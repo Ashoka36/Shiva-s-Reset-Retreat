@@ -1,4 +1,4 @@
-# 🕉️ Shiva's Reset Retreat - Aurora Borealis Website
+# 🕉️ Shiva's Reset Retreat 
 
 A stunning, fully responsive website for **Shiva's Reset Retreat** with an **Aurora Borealis** color theme. This website features smooth animations, mobile-friendly design, and easy-to-customize photo placeholders.
 
